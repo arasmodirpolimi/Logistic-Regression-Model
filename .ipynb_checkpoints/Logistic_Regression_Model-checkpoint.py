@@ -22,7 +22,7 @@ column_names = [
 ]
 
 # Load the dataset
-data_path = r"Data1.csv"  # Update this path as needed
+data_path = r"C:\Users\ali\Desktop\Data1.csv"  # Update this path as needed
 df = pd.read_csv(data_path, names=column_names)
 
 # Remove leading/trailing spaces from string columns
@@ -89,30 +89,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, r
 logreg_model = LogisticRegression(max_iter=3000)
 logreg_model.fit(X_train, y_train)
 logreg_accuracy = logreg_model.score(X_test, y_test) * 100
-
 print("Accuracy LogisticRegression Model:", logreg_accuracy)
 
 # Train and evaluate Gaussian Naive Bayes model
 nb_model = GaussianNB()
 nb_model.fit(X_train, y_train)
 nb_accuracy = nb_model.score(X_test, y_test) * 100
-
 print("Accuracy Naive Bayes Model:", nb_accuracy)
-
-# Plotting the accuracy comparison
-models = ['Logistic Regression', 'Naive Bayes']
-accuracies = [logreg_accuracy, nb_accuracy]
-
-plt.figure(figsize=(7, 5))
-bars = plt.bar(models, accuracies, color=['skyblue', 'salmon'])
-plt.ylim(0, 100)
-plt.ylabel('Accuracy (%)')
-plt.title('Model Accuracy Comparison')
-
-# Annotate bars with accuracy values
-for bar, acc in zip(bars, accuracies):
-	plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 1, f'{acc:.2f}%',
-			 ha='center', va='bottom', fontsize=12)
-
-plt.tight_layout()
-plt.show()
