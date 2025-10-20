@@ -23,17 +23,22 @@ This project demonstrates how to use Logistic Regression and Naive Bayes classif
    ```powershell
    python Logistic_Regression_Model.py
    ```
-3. The script will output the accuracy of both models.
+3. The script will output the accuracy of both models and display a bar chart comparing their accuracy.
 
 ## Notes
 - Make sure the dataset matches the expected column names and format.
 - You can modify the script to use a different dataset or adjust preprocessing as needed.
 
+
 ## Output Example
 ```
-Accuracy LogisticRegression Model: 85.23
-Accuracy Naive Bayes Model: 83.45
+Accuracy LogisticRegression Model: 66.67
+Accuracy Naive Bayes Model: 77.78
 ```
+
+After running, a bar chart will also appear, visually comparing the accuracy of both models:
+
+![Accuracy Comparison Bar Chart](example_accuracy_plot.png)
 
 ## Author
 - [Arsalan Modirkhazeni]
