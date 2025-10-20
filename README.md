@@ -38,7 +38,7 @@ Accuracy Naive Bayes Model: 77.78
 
 After running, a bar chart will also appear, visually comparing the accuracy of both models:
 
-![Accuracy Comparison Bar Chart](example_accuracy_plot.png)
+![Accuracy Comparison Bar Chart](accuracy_plot.png)
 
 ## Author
 - [Arsalan Modirkhazeni]
